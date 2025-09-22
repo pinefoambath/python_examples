@@ -16,7 +16,7 @@ concepts from computational physics.
     show how the system evolves from its initial state, with the new state 
     depending on the previous one.
 
-4.  Animation: `matplotlib.animation.FuncAnimation` is used to visualize the       results of the simulation dynamics.
+4.  Animation: `matplotlib.animation.FuncAnimation` is used to visualize the results of the simulation dynamics.
 """
 
 
