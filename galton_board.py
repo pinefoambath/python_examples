@@ -1,16 +1,34 @@
-# This program creates a computer simulation of a Galton Board.The simulation works in these steps:
+"""
+This program creates a computer simulation of a Galton Board.
 
-# Setup: It asks you for the height of the board (how many rows of nails) and the number of balls to drop. It then creates a series of collection "bins" at the bottom using a NumPy vector.
+The simulation works in these steps:
+1. Setup: 
+   Asks for the board height and number of balls. It then creates 
+   a series of collection "bins" using a NumPy vector.
 
-# Random Path Simulation: For each ball, the program simulates its journey. At every level of the board (for the given height), a 50/50 random choice is made, causing the ball's position to shift slightly left or right.
+2. Random Path Simulation: 
+   For each ball, the program simulates its journey. At every level of 
+   the board, a 50/50 random choice is made, causing the ball's 
+   position to shift left or right.
 
-# Data Collection: After a ball has passed all the nails, its final horizontal position determines which bin it falls into. The program calculates the correct bin and adds one to its counter in the NumPy vector.
+3. Data Collection: 
+   After a ball passes all the nails, its final position determines 
+   which bin it falls into. The program calculates the correct bin and 
+   adds one to its counter in the NumPy vector.
 
-# Visualization: Once all balls have been dropped, the program prints the final counts and, most importantly, uses Matplotlib to generate a bar chart. This chart visually shows the distribution of the balls in the bins. You will see that most balls cluster in the center, forming a bell-shaped curve.
+4. Visualization: 
+   Once all balls are dropped, the program uses Matplotlib to generate 
+   a bar chart, showing the final distribution in the bins, which 
+   forms a bell-shaped curve.
 
-# It's basically a Monte Carlo Simulation: A Monte Carlo simulation is a method that uses a large number of repeated random experiments to solve a problem. This program runs the random experiment of dropping a ball thousands of times to find the final, predictable distribution pattern.
-
-# A stochastic system is one influenced by randomness. The path of a single ball is random and unpredictable. However, this simulation shows that the collective result of many random events is not random at all, but forms a structured pattern (the Binomial distribution).
+Key Concepts:
+- Monte Carlo Simulation: The program runs thousands of random experiments 
+  (dropping a ball) to find a predictable, overall pattern.
+  
+- Stochastic System: The path of a single ball is random, but the 
+  collective result of many balls is an orderly, predictable pattern 
+  (the Binomial distribution; bell curve).
+"""
 
 
 import random as rd
